@@ -318,6 +318,29 @@ footer a:hover {
   color: #555;
   margin: 5px 0;
 }
+/* Responsive Design */
+  @media (max-width: 768px) {
+    .timeline {
+      padding-left: 20px;
+    }
+  
+    .timeline::before {
+      left: 10px;
+    }
+  
+    .timeline-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .timeline-content {
+      margin-left: 30px;
+    }
+  
+    .timeline-dot {
+      left: 0;
+    }
+  }
 
 /* ========================================================== */
 #container2{
