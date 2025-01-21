@@ -333,27 +333,47 @@ footer a:hover {
 }
 
 /* Responsive Design */
+/* Responsive Design for Timeline */
 @media (max-width: 768px) {
   .timeline {
-    padding-left: 20px;
+    padding-left: 10px; /* Reduce padding for smaller screens */
   }
 
   .timeline::before {
-    left: 10px;
+    left: 5px; /* Adjust position of the timeline line */
   }
 
   .timeline-item {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align content to the left */
+    margin-bottom: 20px; /* Adjust spacing between items */
   }
 
   .timeline-content {
-    margin-left: 30px;
+    margin-left: 20px; /* Adjust spacing for smaller screens */
+    width: 100%; /* Ensure content takes full width */
+    text-align: left; /* Align text to the left */
   }
 
   .timeline-dot {
-    left: 0;
+    left: 0; /* Adjust dot alignment */
+    margin-bottom: 10px; /* Add space below the dot */
   }
+}
+
+/* General Fixes for Padding and Width */
+.timeline-content {
+  max-width: 100%; /* Ensure content doesn't overflow */
+  word-wrap: break-word; /* Wrap long text */
+}
+
+.timeline {
+  overflow-x: hidden; /* Prevent horizontal scrolling issues */
+}
+
+/* Additional Helper Classes for Debugging */
+body {
+  overflow-x: hidden; /* Ensure the body does not scroll horizontally */
 }
 
 .education-section {
