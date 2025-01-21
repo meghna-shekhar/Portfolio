@@ -254,127 +254,107 @@ footer a:hover {
 
 /* Timeline */
 .experience-section {
-  padding: 50px 20px;
-  background: #f8f9fa;
-}
-
-.experience-section h2 {
-  font-size: 2rem;
-  color: #0056b3;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* Timeline */
-.timeline {
-  position: relative;
-  margin: 0 auto;
-  padding-left: 40px;
-  max-width: 800px;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 20px;
-  width: 4px;
-  height: 100%;
-  background: #000000;
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center; /* Align items vertically */
-  opacity: 0; /* Hidden by default */
-  transform: translateY(50px); /* Start slightly below */
-  transition: all 0.8s ease-out; /* Smooth animation */
-}
-
-.timeline-item.visible {
-  opacity: 1;
-  transform: translateY(0); /* Moves to original position */
-}
-
-.timeline-dot {
-  position: absolute;
-  left: 8px; /* Adjust based on the timeline line */
-  width: 12px;
-  height: 12px;
-  background: #ffc107;
-  border: 2px solid #000000;
-  border-radius: 50%;
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Offset for perfect centering */
-  z-index: 2;
-}
-
-.timeline-content {
-  background: #fff;
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-left: 40px; /* Space for the dot */
-  flex: 1; /* Ensures proper alignment */
-}
-
-.timeline-content h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.timeline-content p {
-  font-size: 1rem;
-  color: #555;
-  margin: 5px 0;
-}
-
-/* Responsive Design */
-/* Responsive Design for Timeline */
-@media (max-width: 768px) {
-  .timeline {
-    padding-left: 10px; /* Reduce padding for smaller screens */
+    padding: 50px 20px;
+    background: #f8f9fa;
   }
-
+  
+  .experience-section h2 {
+    font-size: 2rem;
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+ /* Timeline */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 40px;
+    max-width: 800px;
+  }
+  
   .timeline::before {
-    left: 5px; /* Adjust position of the timeline line */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 4px;
+    height: 100%;
+    background: #000000;
   }
-
+  
   .timeline-item {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align content to the left */
-    margin-bottom: 20px; /* Adjust spacing between items */
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    opacity: 0; /* Hidden by default */
+    transform: translateY(50px); /* Start slightly below */
+    transition: all 0.8s ease-out; /* Smooth animation */
   }
-
-  .timeline-content {
-    margin-left: 20px; /* Adjust spacing for smaller screens */
-    width: 100%; /* Ensure content takes full width */
-    text-align: left; /* Align text to the left */
+  
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves to original position */
   }
-
+  
   .timeline-dot {
-    left: 0; /* Adjust dot alignment */
-    margin-bottom: 10px; /* Add space below the dot */
+    position: absolute;
+    left: 8px; /* Adjust based on the timeline line */
+    width: 12px;
+    height: 12px;
+    background: #ffc107;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Offset for perfect centering */
+    z-index: 2;
   }
-}
-
-/* General Fixes for Padding and Width */
-.timeline-content {
-  max-width: 100%; /* Ensure content doesn't overflow */
-  word-wrap: break-word; /* Wrap long text */
-}
-
-.timeline {
-  overflow-x: hidden; /* Prevent horizontal scrolling issues */
-}
-
-/* Additional Helper Classes for Debugging */
-body {
-  overflow-x: hidden; /* Ensure the body does not scroll horizontally */
-}
+  
+  .timeline-content {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 40px; /* Space for the dot */
+    flex: 1; /* Ensures proper alignment */
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .timeline-content p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .timeline {
+      padding-left: 20px;
+    }
+  
+    .timeline::before {
+      left: 10px;
+    }
+  
+    .timeline-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .timeline-content {
+      margin-left: 30px;
+    }
+  
+    .timeline-dot {
+      left: 0;
+    }
+  }
 
 .education-section {
   padding: 50px 20px;
