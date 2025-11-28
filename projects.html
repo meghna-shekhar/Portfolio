@@ -50,150 +50,136 @@
     <div class="page-content">
       <div id="content">
 
-  <div class="section px-3 px-lg-4 pt-5" id="projects">
-  <div class="container-narrow">
-    <div class="text-center mb-5">
-      <h2 class="marker marker-center">Projects</h2>
-      <p class="mx-auto mb-3" style="max-width:700px;">
-        Selected work across deep learning, computer vision, data engineering, and web development.
-        Each card links to a detailed project page with code, write-up, and demo.
-      </p>
-    </div>
-
-    <!-- ISL → MOCAP -->
-    <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up">
-      <img src="images/projects/isl2mocap.png"
-           class="img-fluid me-3"
-           style="width:220px; height:auto; object-fit:contain;"
-           alt="Indian Sign Language to MOCAP">
-      <div class="flex-grow-1 position-relative">
-        <h3 class="h5 mb-1">Indian Sign Language to MOCAP</h3>
-        <small class="text-muted d-block mb-2">Deep Learning · Computer Vision</small>
-
-        <p class="mb-3">
-          Translation pipeline that converts text/speech to Indian Sign Language
-          by estimating human pose from ISL videos and mapping it to motion-capture
-          style keypoints.
-        </p>
-
-        <a class="btn btn-primary btn-sm me-2"
-           href="project-isl2mocap.html">
-          View details
-        </a>
-        <a class="btn btn-outline-secondary btn-sm"
-           href="https://github.com/meghna-shekhar/Indian-Sign-Language-to-MOCAP"
-           target="_blank" rel="noopener noreferrer">
-          Code
-        </a>
-
-        <!-- Make the whole card clickable towards details -->
-        <a href="project-isl2mocap.html" class="stretched-link"></a>
-      </div>
-    </div>
-
-    <!-- NamaSign -->
-    <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="150">
-      <img src="images/projects/isl1.png"
-           class="img-fluid me-3"
-           style="width:220px; height:auto; object-fit:contain;"
-           alt="NamaSign ISL Alphabet Detection">
-      <div class="flex-grow-1 position-relative">
-        <h3 class="h5 mb-1">NamaSign: ISL Alphabet Detection</h3>
-        <small class="text-muted d-block mb-2">Deep Learning · Image Classification</small>
-
-        <p class="mb-3">
-          Image classifier for Indian Sign Language alphabets using VGG16 and ResNet18
-          on a cluttered, real-world dataset with varied lighting and backgrounds.
-        </p>
-
-        <a class="btn btn-primary btn-sm me-2"
-           href="project-namasign.html">
-          View details
-        </a>
-        <a class="btn btn-outline-secondary btn-sm"
-           href="https://github.com/meghna-shekhar/NamaSign-Indian-Sign-Language-Alphabet-Detection"
-           target="_blank" rel="noopener noreferrer">
-          Code
-        </a>
-
-        <a href="project-namasign.html" class="stretched-link"></a>
-      </div>
-    </div>
-
-    <!-- CareerQuest.in -->
-    <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="300">
-      <img src="images/projects/cq.png"
-           class="img-fluid me-3"
-           style="width:220px; height:auto; object-fit:contain;"
-           alt="CareerQuest.in">
-      <div class="flex-grow-1 position-relative">
-        <h3 class="h5 mb-1">CareerQuest.in Website</h3>
-        <small class="text-muted d-block mb-2">Web Development · Recommendations</small>
-
-        <p class="mb-3">
-          Course-recommendation site that scrapes MOOCs and suggests programs based on
-          user-selected career paths, with side-by-side comparison of ratings and prices.
-        </p>
-
-        <a class="btn btn-primary btn-sm me-2"
-           href="project-careerquest.html">
-          View details
-        </a>
-        <a class="btn btn-outline-secondary btn-sm"
-           href="https://github.com/meghna-shekhar/CareerQuest.in"
-           target="_blank" rel="noopener noreferrer">
-          Code
-        </a>
-
-        <a href="project-careerquest.html" class="stretched-link"></a>
-      </div>
-    </div>
-
-    <!-- TEMPLATE for future projects -->
-    <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="450">
-      <img src="images/projects/placeholder.png"
-           class="img-fluid me-3"
-           style="width:220px; height:auto; object-fit:contain;"
-           alt="Project placeholder">
-      <div class="flex-grow-1 position-relative">
-        <h3 class="h5 mb-1">[Project Title]</h3>
-        <small class="text-muted d-block mb-2">[Area · e.g., NLP · Data Engineering]</small>
-
-        <p class="mb-3">
-          One-sentence summary of what the project does and why it matters.
-        </p>
-
-        <a class="btn btn-primary btn-sm me-2"
-           href="[project-slug].html">
-          View details
-        </a>
-        <!-- Optional: only if you have GitHub -->
-        <a class="btn btn-outline-secondary btn-sm"
-           href="#"
-           target="_blank" rel="noopener noreferrer">
-          Code
-        </a>
-
-        <a href="[project-slug].html" class="stretched-link"></a>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-        <!-- You can copy the template card above and paste here for more projects -->
-        <!--
-        <div class="col-md-4 d-flex align-items-stretch">
-          ...
+        <div class="section px-3 px-lg-4 pt-5" id="projects">
+          <div class="container-narrow">
+            <div class="text-center mb-5">
+              <h2 class="marker marker-center">Projects</h2>
+              <p class="mx-auto mb-3" style="max-width:700px;">
+                Selected work across deep learning, computer vision, data engineering, and web development.
+                Each card links to a detailed project page with code, write-up, and demo.
+              </p>
+            </div>
+        
+            <!-- ISL → MOCAP -->
+            <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up">
+              <img src="images/projects/isl2mocap.png"
+                   class="img-fluid me-3"
+                   style="width:220px; height:auto; object-fit:contain;"
+                   alt="Indian Sign Language to MOCAP">
+              <div class="flex-grow-1 position-relative">
+                <h3 class="h5 mb-1">Indian Sign Language to MOCAP</h3>
+                <small class="text-muted d-block mb-2">Deep Learning · Computer Vision</small>
+        
+                <p class="mb-3">
+                  Translation pipeline that converts text/speech to Indian Sign Language
+                  by estimating human pose from ISL videos and mapping it to motion-capture
+                  style keypoints.
+                </p>
+        
+                <a class="btn btn-primary btn-sm me-2"
+                   href="project-isl2mocap.html">
+                  View details
+                </a>
+                <a class="btn btn-outline-secondary btn-sm"
+                   href="https://github.com/meghna-shekhar/Indian-Sign-Language-to-MOCAP"
+                   target="_blank" rel="noopener noreferrer">
+                  Code
+                </a>
+        
+                <!-- Make the whole card clickable towards details -->
+                <a href="project-isl2mocap.html" class="stretched-link"></a>
+              </div>
+            </div>
+        
+            <!-- NamaSign -->
+            <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="150">
+              <img src="images/projects/isl1.png"
+                   class="img-fluid me-3"
+                   style="width:220px; height:auto; object-fit:contain;"
+                   alt="NamaSign ISL Alphabet Detection">
+              <div class="flex-grow-1 position-relative">
+                <h3 class="h5 mb-1">NamaSign: ISL Alphabet Detection</h3>
+                <small class="text-muted d-block mb-2">Deep Learning · Image Classification</small>
+        
+                <p class="mb-3">
+                  Image classifier for Indian Sign Language alphabets using VGG16 and ResNet18
+                  on a cluttered, real-world dataset with varied lighting and backgrounds.
+                </p>
+        
+                <a class="btn btn-primary btn-sm me-2"
+                   href="project-namasign.html">
+                  View details
+                </a>
+                <a class="btn btn-outline-secondary btn-sm"
+                   href="https://github.com/meghna-shekhar/NamaSign-Indian-Sign-Language-Alphabet-Detection"
+                   target="_blank" rel="noopener noreferrer">
+                  Code
+                </a>
+        
+                <a href="project-namasign.html" class="stretched-link"></a>
+              </div>
+            </div>
+        
+            <!-- CareerQuest.in -->
+            <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="300">
+              <img src="images/projects/cq.png"
+                   class="img-fluid me-3"
+                   style="width:220px; height:auto; object-fit:contain;"
+                   alt="CareerQuest.in">
+              <div class="flex-grow-1 position-relative">
+                <h3 class="h5 mb-1">CareerQuest.in Website</h3>
+                <small class="text-muted d-block mb-2">Web Development · Recommendations</small>
+        
+                <p class="mb-3">
+                  Course-recommendation site that scrapes MOOCs and suggests programs based on
+                  user-selected career paths, with side-by-side comparison of ratings and prices.
+                </p>
+        
+                <a class="btn btn-primary btn-sm me-2"
+                   href="project-careerquest.html">
+                  View details
+                </a>
+                <a class="btn btn-outline-secondary btn-sm"
+                   href="https://github.com/meghna-shekhar/CareerQuest.in"
+                   target="_blank" rel="noopener noreferrer">
+                  Code
+                </a>
+        
+                <a href="project-careerquest.html" class="stretched-link"></a>
+              </div>
+            </div>
+        
+            <!-- TEMPLATE for future projects -->
+            <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="450">
+              <img src="images/projects/placeholder.png"
+                   class="img-fluid me-3"
+                   style="width:220px; height:auto; object-fit:contain;"
+                   alt="Project placeholder">
+              <div class="flex-grow-1 position-relative">
+                <h3 class="h5 mb-1">[Project Title]</h3>
+                <small class="text-muted d-block mb-2">[Area · e.g., NLP · Data Engineering]</small>
+        
+                <p class="mb-3">
+                  One-sentence summary of what the project does and why it matters.
+                </p>
+        
+                <a class="btn btn-primary btn-sm me-2"
+                   href="[project-slug].html">
+                  View details
+                </a>
+                <!-- Optional: only if you have GitHub -->
+                <a class="btn btn-outline-secondary btn-sm"
+                   href="#"
+                   target="_blank" rel="noopener noreferrer">
+                  Code
+                </a>
+        
+                <a href="[project-slug].html" class="stretched-link"></a>
+              </div>
+            </div>
+        
+          </div>
         </div>
-        <div class="col-md-4 d-flex align-items-stretch">
-          ...
-        </div>
-        -->
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="section px-2 px-lg-4 pb-4 pt-5 mb-5" id="contact">
   <div class="container-narrow">
