@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indian Sign Language to MOCAP | Meghna T S</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap" media="print" onload="this.media='all'"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
+    </noscript>
+
+    <link href="./css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
+    <link href="./css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
+    <link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
+    <link href="./css/aos.css?ver=1.2.0" rel="stylesheet">
+    <link href="./css/main.css?ver=1.2.0" rel="stylesheet">
+
+    <noscript>
+      <style type="text/css">
+        [data-aos] {
+          opacity: 1 !important;
+          transform: translate(0) scale(1) !important;
+        }
+      </style>
+    </noscript>
+  </head>
+
+  <body id="top">
+    <!-- NAVBAR -->
+    <header class="bg-light text-purple">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="header-nav" role="navigation">
+        <div class="container">
+          <a class="navbar-brand site-title mb-0" href="index.html#top">
+            Meghna Trichur Saravana Shekhar
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-2">
+              <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#services">Specialisation</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#education">Education</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-content">
+      <div id="content">
+        <section class="section px-3 px-lg-4 pt-5" id="project-detail">
+          <div class="container-narrow" style="margin-top: 5rem;">
+            <!-- Breadcrumb / label -->
+            <p class="text-uppercase text-muted mb-1">Project</p>
+        
+            <!-- Title -->
+            <h1 class="marker mb-3">Indian Sign Language to MOCAP</h1>
+            <p class="text-muted mb-4">
+              Deep Learning · Pose Estimation · Assistive Technology
+            </p>
+        
+            <!-- Hero image -->
+            <figure class="mb-4 text-center">
+              <img
+                src="images/projects/isl2mocap.png"
+                alt="Indian Sign Language to MOCAP"
+                class="img-fluid rounded shadow-sm"
+                style="max-height: 360px; object-fit: contain; background:#ffffff;"
+              />
+              <figcaption class="text-muted mt-2" style="font-size:0.9rem;">
+                Example of ISL motion captured as joint keypoints and rendered on a 3D character.
+              </figcaption>
+            </figure>
+        
+            <!-- Blog-style content -->
+            <article class="project-article">
+        
+              <h2 class="h4 mt-4">Overview</h2>
+              <p>
+                This project builds a translation pipeline that converts
+                <strong>text or speech</strong> into <strong>Indian Sign Language (ISL)</strong>
+                motion. Starting from ISL educational videos, I estimate 2D human pose,
+                clean and normalize the joints, and export the result as
+                <strong>MOCAP-style keypoint sequences</strong> that can drive a 3D character.
+              </p>
+        
+              <h2 class="h4 mt-4">Motivation</h2>
+              <p>
+                Most sign language technologies focus on ASL, and they usually assume
+                controlled recording conditions. ISL users often rely on human interpreters,
+                which limits accessibility. I wanted to explore whether modern pose
+                estimation can help build a <strong>bridge between spoken/text language
+                and ISL</strong>, especially under realistic lighting, occlusion, and camera
+                angles.
+              </p>
+        
+              <h2 class="h4 mt-4">What the system does</h2>
+              <p>
+                At a high level, the system takes an input phrase, maps it to a sequence of
+                ISL glosses, and then plays the corresponding motion on a character rig:
+              </p>
+              <ol>
+                <li>
+                  <strong>Pose extraction:</strong> run 2D human pose estimation on ISL
+                  teaching videos to obtain joint coordinates for each frame.
+                </li>
+                <li>
+                  <strong>Cleaning &amp; normalization:</strong> fix missing joints,
+                  smooth jitter, and normalize skeletons so that sequences can be compared
+                  and reused.
+                </li>
+                <li>
+                  <strong>Motion library:</strong> store cleaned pose sequences as
+                  reusable “building blocks” for individual signs.
+                </li>
+                <li>
+                  <strong>Text–to–sign mapping:</strong> map English phrases to ISL sign
+                  order and stitch together the corresponding motion clips.
+                </li>
+                <li>
+                  <strong>Export to MOCAP:</strong> write the final joint trajectories in
+                  a format suitable for rendering with a 3D character.
+                </li>
+              </ol>
+        
+              <h2 class="h4 mt-4">Technical highlights</h2>
+              <ul>
+                <li>Implemented the full pipeline in <strong>Python</strong> using
+                    <strong>TensorFlow</strong>, <strong>Keras</strong>, <strong>OpenCV</strong>,
+                    and <strong>NumPy</strong>.</li>
+                <li>Designed post-processing to handle occluded or missing joints and
+                    keep motion physically plausible.</li>
+                <li>Experimented with different normalization strategies to make pose
+                    sequences reusable across videos and subjects.</li>
+                <li>Structured the data so it can plug into downstream 3D rendering
+                    tools or real-time animation systems.</li>
+              </ul>
+        
+              <h2 class="h4 mt-4">Impact and learnings</h2>
+              <p>
+                The prototype demonstrates that we can go from raw ISL videos to
+                <strong>reusable motion segments</strong> that approximate sign-language
+                gestures. It also surfaced practical challenges: noisy landmarks,
+                camera angles that obscure hands, and linguistic nuances when mapping
+                English word order to ISL.
+              </p>
+              <p>
+                From an engineering perspective, the project taught me how to design
+                an end-to-end vision pipeline, debug pose-estimation failures, and
+                think about how ML systems support real accessibility use cases rather
+                than just benchmarks.
+              </p>
+        
+              <h2 class="h4 mt-4">Tech stack</h2>
+              <p class="mb-2">
+                <strong>Languages:</strong> Python<br/>
+                <strong>Libraries:</strong> TensorFlow, Keras, OpenCV, NumPy<br/>
+                <strong>Topics:</strong> 2D human pose estimation, sequence processing,
+                data cleaning, accessibility-focused ML
+              </p>
+        
+              <h2 class="h4 mt-4">Code &amp; resources</h2>
+              <p>
+                The core implementation and experiments are available in my public
+                GitHub repository:
+              </p>
+              <p>
+                <a class="btn btn-primary btn-sm me-2"
+                   href="https://github.com/meghna-shekhar/Indian-Sign-Language-to-MOCAP"
+                   target="_blank" rel="noopener noreferrer">
+                  View code on GitHub
+                </a>
+                <a class="btn btn-outline-secondary btn-sm"
+                   href="projects.html">
+                  Back to all projects
+                </a>
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="pt-4 pb-4 text-center bg-light">
+      <div class="container">
+        <div class="my-3">
+          <div class="h4">Meghna Trichur Saravana Shekhar</div>
+          <p>AI Enthusiast</p>
+          <div class="social-nav">
+            <nav role="navigation">
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/meghna-shekhar" title="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span class="menu-title sr-only">GitHub</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://leetcode.com/u/meghna_shekhar/" title="LeetCode">
+                    <i class="cib-leetcode"></i>
+                    <span class="menu-title sr-only">LeetCode</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/meghna-t-s/" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="menu-title sr-only">LinkedIn</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://linktr.ee/meghna_shekhar" target="_blank" title="Linktree">
+                    <img src="images/icons/linktree.png" class="icon-linktree-img" alt="Linktree">
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="scrolltop">
+      <a class="btn btn-secondary" href="#top">
+        <span class="icon"><i class="fas fa-angle-up fa-x"></i></span>
+      </a>
+    </div>
+
+    <script src="./scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>
+    <script src="./scripts/masonry.pkgd.min.js?ver=1.2.0"></script>
+    <script src="./scripts/BigPicture.min.js?ver=1.2.0"></script>
+    <script src="./scripts/purecounter.min.js?ver=1.2.0"></script>
+    <script src="./scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
+    <script src="./scripts/aos.min.js?ver=1.2.0"></script>
+    <script src="./scripts/main.js?ver=1.2.0"></script>
+  </body>
+</html>

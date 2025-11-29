@@ -399,83 +399,114 @@
 
     <div class="container py-1">
       <div class="row">
-        <!-- Card 1 -->
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card project-card mb-3" data-aos="fade-right" data-aos-delay="100" style="height: 100%;">
+        <!-- 1. StoryBook LLM -->
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card project-card mb-3 w-100" data-aos="fade-right" data-aos-delay="100">
             <div class="card-header px-3 py-2">
               <div class="d-flex flex-column align-items-start">
-                <h3 class="h5 mb-1 text-white text-center">Indian Sign Language to MOCAP</h3>
-                <small class="text-white">Deep Learning</small>
+                <h3 class="h5 mb-1 text-white">Personalized Story Book Generation with Fine-tuned LLM</h3>
+                <small class="text-white">Large Language Models · Multimodal AI · Education</small>
               </div>
             </div>
             <div class="card-body px-3 py-2 d-flex flex-column">
-              <div id="code-images" class="mb-3">
-                <img class="code-tag" src="https://img.shields.io/badge/python-3.7+-blue.svg" style="width:85px; height:20px;" alt="" />
-                <img class="code-tag" src="https://img.shields.io/badge/tensorflow_gpu-2.11.0-orange.svg" style="width:110px; height:20px;" alt="" />
-              </div>
-              <img src="images/projects/isl2mocap.png" alt="qos" style="width:100%; max-height:250px; object-fit:contain; margin-bottom: 10px;">
-              <p style="flex-grow: 1;">
-                A translation medium for text/speech to Indian Sign Language is built using supervised learning. From ISL educational videos, human 2D pose is estimated. This project tackles problems in pose data such as missing joint information and occlusions.
+              <img src="images/projects/storybook.png"
+                   alt="Personalized StoryBook Generation"
+                   style="width:100%; max-height:250px; object-fit:contain; margin-bottom:10px;">
+              <p style="flex-grow:1;">
+                Cost-efficient multimodal system that fine-tunes an open-source LLM and a custom vision
+                pipeline to generate personalized K–2 storybooks aligned with UFLI literacy goals. Text,
+                images, and vocabulary are stored in Supabase for classroom deployment and progress tracking.
               </p>
               <div class="text-center mt-3">
-                <a class="btn btn-primary shadow-sm" href="https://github.com/meghna-shekhar/Indian-Sign-Language-to-MOCAP">CODE</a>
+                <a class="btn btn-primary shadow-sm" href="storybook.html">View details</a>
               </div>
             </div>
           </div>
         </div>
-    
-        <!-- Card 2 -->
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card project-card mb-3" data-aos="fade-up" data-aos-delay="200" style="height: 100%;">
+      
+        <!-- 2. UrbanTwin AI -->
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card project-card mb-3 w-100" data-aos="fade-left" data-aos-delay="150">
             <div class="card-header px-3 py-2">
               <div class="d-flex flex-column align-items-start">
-                <h3 class="h5 mb-1 text-white text-center">NamaSign: Indian Sign Language Alphabet Detection</h3>
-                <small class="text-white">Deep Learning</small>
+                <h3 class="h5 mb-1 text-white">UrbanTwin AI – Generative City Simulation</h3>
+                <small class="text-white">Graph Neural Networks · Geospatial ML</small>
               </div>
             </div>
             <div class="card-body px-3 py-2 d-flex flex-column">
-              <div id="code-images" class="mb-3">
-                <img class="code-tag" src="https://img.shields.io/badge/python-3.7+-blue.svg" style="width:85px; height:20px;" alt="" />
-                <img class="code-tag" src="https://img.shields.io/badge/tensorflow-2.11.0-orange.svg" style="width:110px; height:20px;" alt="" />
-              </div>
-              <img src="images/projects/isl1.png" alt="CareerQuest" style="width:100%; max-height:250px; object-fit:contain; margin-bottom: 10px;">
-              <p style="flex-grow: 1;">
-                Implemented image classification using VGG16 and Resnet18 (FastAI) on a cluttered ISL alphabet image dataset comprising different skin colors, backgrounds, and lighting conditions of ISL alphabets. Achieved 93.9% accuracy using VGG16 and 91.8% accuracy using Resnet18.
+              <img src="images/projects/urbantwin.png"
+                   alt="UrbanTwin AI"
+                   style="width:100%; max-height:250px; object-fit:contain; margin-bottom:10px;">
+              <p style="flex-grow:1;">
+                AI-powered digital twin of city regions using OpenStreetMap and MODIS data to simulate how
+                changes in building density and green cover affect urban heat, traffic congestion, and PM2.5.
+                Built with STGNNs, LightGBM, and Vertex AI, with interactive scenario analysis dashboard.
               </p>
               <div class="text-center mt-3">
-                <a class="btn btn-primary shadow-sm" href="https://github.com/meghna-shekhar/NamaSign-Indian-Sign-Language-Alphabet-Detection">CODE</a>
+                <a class="btn btn-primary shadow-sm" href="urbantwin.html">View details</a>
               </div>
             </div>
           </div>
         </div>
-    
-        <!-- Card 3 -->
-        <div class="col-md-4 d-flex align-items-stretch">
-          <div class="card project-card mb-3" data-aos="fade-left" data-aos-delay="300" style="height: 100%;">
+      
+        <!-- 3. Buffalo Accident Risk RL -->
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card project-card mb-3 w-100" data-aos="fade-right" data-aos-delay="200">
             <div class="card-header px-3 py-2">
               <div class="d-flex flex-column align-items-start">
-                <h3 class="h5 mb-1 text-white text-center">CareerQuest.in Website</h3>
-                <small class="text-white">Web Development</small>
+                <h3 class="h5 mb-1 text-white">
+                  Buffalo Accident Risk Prediction & Resource Allocation (RL)
+                </h3>
+                <small class="text-white">Reinforcement Learning · City Analytics</small>
               </div>
             </div>
             <div class="card-body px-3 py-2 d-flex flex-column">
-              <div id="code-images" class="mb-3">
-                <img class="code-tag" src="https://img.shields.io/badge/HTML-5-orange.svg" style="width:60px; height:20px;" alt="" />
-                <img class="code-tag" src="https://img.shields.io/badge/CSS-3-yellow.svg" style="width:60px; height:20px;" alt="" />
-                <img class="code-tag" src="https://img.shields.io/badge/JQuery-1.10.2-orange.svg" style="width:90px; height:20px;" alt="" />
-                <img class="code-tag" src="https://img.shields.io/badge/python-3.7-blue.svg" style="width:80px; height:20px;" alt="" />
-              </div>
-              <!-- Adjusted Larger Image -->
-              <img src="images/projects/cq.png" alt="CareerQuest" style="width:100%; max-height:300px; object-fit:contain; margin-bottom: 10px;">
-              <p style="flex-grow: 1;">
-                Web Development Project which suggests users relevant courses based on their career paths. Scrapes courses from existing MOOCs platforms based on subject/career preferences using keyword matching and enables users to compare ratings and prices across different websites.
+              <img src="images/projects/buffalo-rl.png"
+                   alt="Buffalo Accident Risk RL"
+                   style="width:100%; max-height:250px; object-fit:contain; margin-bottom:10px;">
+              <p style="flex-grow:1;">
+                PPO-based reinforcement learning system that predicts high-risk accident zones from Buffalo
+                traffic incident data and optimizes deployment of emergency vehicles. Includes geospatial
+                heatmaps (ZIP code &amp; 500m grids) and comparisons against random baselines.
               </p>
               <div class="text-center mt-3">
-                <a class="btn btn-primary shadow-sm" href="https://github.com/meghna-shekhar/CareerQuest.in">CODE</a>
+                <a class="btn btn-primary shadow-sm" href="buffalo-rl.html">View details</a>
               </div>
             </div>
           </div>
         </div>
+      
+        <!-- 4. ISL Translation -->
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card project-card mb-3 w-100" data-aos="fade-left" data-aos-delay="250">
+            <div class="card-header px-3 py-2">
+              <div class="d-flex flex-column align-items-start">
+                <h3 class="h5 mb-1 text-white">
+                  Speech to Indian Sign Language Translation using 3D Pose Estimation
+                </h3>
+                <small class="text-white">Computer Vision · Pose Estimation</small>
+              </div>
+            </div>
+            <div class="card-body px-3 py-2 d-flex flex-column">
+              <img src="images/projects/isl2mocap.png"
+                   alt="Indian Sign Language MOCAP"
+                   style="width:100%; max-height:250px; object-fit:contain; margin-bottom:10px;">
+              <p style="flex-grow:1;">
+                Translation pipeline that converts speech/text to Indian Sign Language by estimating 2D human
+                pose from ISL videos, handling missing/occluded joints, and lifting to 3D motion-capture
+                keypoints for animation. Forms one of the first ISL motion capture datasets.
+              </p>
+              <div class="text-center mt-3">
+                <a class="btn btn-primary shadow-sm" href="isl-translation.html">View details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- More projects button -->
+        <div class="col-12 text-center mt-4">
+          <a href="projects.html" class="btn-accent">More projects →</a>
+      </div>
       </div>
     </div>
   </div>

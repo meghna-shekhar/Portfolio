@@ -30,8 +30,8 @@
   </head>
   <body id="top">
     <header class="bg-light text-purple">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
-        <div class="container"><a class="navbar-brand site-title mb-0" href="#">Meghna Trichur Saravana Shekhar</a>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-scrolled" id="header-nav" role="navigation">
+        <div class="container"><a class="navbar-brand site-title mb-0" href="index.html#top">Meghna Trichur Saravana Shekhar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto me-2">
@@ -52,131 +52,216 @@
 
         <div class="section px-3 px-lg-4 pt-5" id="projects">
           <div class="container-narrow">
+        
+            <!-- Page heading -->
             <div class="text-center mb-5">
               <h2 class="marker marker-center">Projects</h2>
-              <p class="mx-auto mb-3" style="max-width:700px;">
-                Selected work across deep learning, computer vision, data engineering, and web development.
-                Each card links to a detailed project page with code, write-up, and demo.
+              <p class="mx-auto mb-3" style="max-width:720px;">
+                A broader look at my work across reinforcement learning, multimodal AI, computer vision, and data engineering.
+                Code is provided for personal projects; organization-related work includes summaries due to confidentiality.
               </p>
             </div>
         
-            <!-- ISL → MOCAP -->
-            <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up">
+            <!-- ====================== FEATURED / RECENT ====================== -->
+            <h3 class="h5 mb-3">Featured & Recent</h3>
+        
+            <!-- StoryLab: Personalized Storybooks -->
+            <div class="card project-card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up">
+              <img src="images/projects/storybook.png"
+                   class="img-fluid me-3"
+                   style="width:220px; height:auto; object-fit:contain;"
+                   alt="Personalized Story Book Generation">
+              <div class="flex-grow-1 position-relative">
+                <h4 class="h5 mb-1">Personalized Story Book Generation with Fine-tuned LLM</h4>
+                <small class="text-muted d-block mb-2">
+                  Multimodal AI · Education · LLMs
+                </small>
+        
+                <p class="mb-3">
+                  Cost-efficient multimodal system that generates personalized storybooks for K–2 learners
+                  using a fine-tuned open-source LLM and UFLI-aligned prompts. A custom vision pipeline
+                  ensures consistent, age-appropriate illustrations, with all assets stored and served
+                  via Supabase for classroom deployment.
+                </p>
+                <!-- <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a> -->
+        
+                <a href="storybook.html" class="stretched-link"></a>
+              </div>
+            </div>
+        
+            <!-- UrbanTwin AI -->
+            <div class="card project-card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="100">
+              <img src="images/projects/urbantwin.png"
+                   class="img-fluid me-3"
+                   style="width:220px; height:auto; object-fit:contain;"
+                   alt="UrbanTwin AI – Generative City Simulation">
+              <div class="flex-grow-1 position-relative">
+                <h4 class="h5 mb-1">UrbanTwin AI – Generative City Simulation</h4>
+                <small class="text-muted d-block mb-2">
+                  Graph Neural Networks · GeoSpatial · Hackathon
+                </small>
+        
+                <p class="mb-3">
+                  AI-powered city twin built for UBHackopoly 2025 that lets users explore how changes in
+                  building density, green cover, and traffic affect urban heat islands, congestion, and
+                  air quality. Combines STGNNs, LightGBM, and Vertex AI (Gemini 2.5 Pro) with OpenStreetMap
+                  + MODIS data and an interactive dashboard.
+                </p>
+                <a href="urbantwin.html" class="stretched-link"></a>
+              </div>
+            </div>
+        
+            <!-- Buffalo Accident RL -->
+            <div class="card project-card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="200">
+              <img src="images/projects/buffalo-rl.png"
+                   class="img-fluid me-3"
+                   style="width:220px; height:auto; object-fit:contain;"
+                   alt="Buffalo Accident Risk Prediction">
+              <div class="flex-grow-1 position-relative">
+                <h4 class="h5 mb-1">Buffalo Accident Risk Prediction & Resource Allocation (RL)</h4>
+                <small class="text-muted d-block mb-2">
+                  Reinforcement Learning · City Analytics
+                </small>
+        
+                <p class="mb-3">
+                  PPO-based reinforcement learning system that predicts high-risk accident zones from
+                  Buffalo traffic data and optimizes deployment of emergency vehicles. Includes geospatial
+                  heatmaps (ZIP code &amp; 500m grids) and comparisons against a random baseline agent.
+                </p>
+        
+                <a href="buffalo-rl.html" class="stretched-link"></a>
+              </div>
+            </div>
+        
+            <!-- Skin Disease Classification -->
+            <div class="card project-card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="300">
+              <img src="images/projects/skin-disease.png"
+                   class="img-fluid me-3"
+                   style="width:220px; height:auto; object-fit:contain;"
+                   alt="Skin Disease Detection & Classification">
+              <div class="flex-grow-1 position-relative">
+                <h4 class="h5 mb-1">Skin Disease Detection & Classification</h4>
+                <small class="text-muted d-block mb-2">
+                  Computer Vision · Medical Imaging
+                </small>
+        
+                <p class="mb-3">
+                  Deep learning pipeline using VGG19, ResNet50, EfficientNet-B0, and DenseNet121 to
+                  classify five common skin diseases. Built an ensemble by averaging softmax outputs to
+                  improve stability, achieving up to 74% test accuracy and LAB-based overlays for lesion
+                  localization and explainability.
+                </p>
+        
+                <a href="skin-disease.html" class="stretched-link"></a>
+              </div>
+            </div>
+        
+            <!-- ====================== SIGNATURE PAST PROJECTS ====================== -->
+            <h3 class="h5 mt-5 mb-3">Signature Projects</h3>
+        
+            <!-- Speech → ISL 3D Pose -->
+            <div class="card project-card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up">
               <img src="images/projects/isl2mocap.png"
                    class="img-fluid me-3"
                    style="width:220px; height:auto; object-fit:contain;"
-                   alt="Indian Sign Language to MOCAP">
+                   alt="Speech to Indian Sign Language 3D Pose">
               <div class="flex-grow-1 position-relative">
-                <h3 class="h5 mb-1">Indian Sign Language to MOCAP</h3>
-                <small class="text-muted d-block mb-2">Deep Learning · Computer Vision</small>
+                <h4 class="h5 mb-1">Speech to Indian Sign Language using 3D Pose Estimation</h4>
+                <small class="text-muted d-block mb-2">
+                  Computer Vision · NLP · 3D Pose
+                </small>
         
                 <p class="mb-3">
-                  Translation pipeline that converts text/speech to Indian Sign Language
-                  by estimating human pose from ISL videos and mapping it to motion-capture
-                  style keypoints.
+                  End-to-end translation medium from text/speech to Indian Sign Language using 2D pose
+                  estimation from ISL videos, depth regression to 3D pose, and grammar-aware text processing
+                  with NLTK. Outputs motion-capture (.bvh) files rendered in Blender for ISL animation.
                 </p>
+                <!-- <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a> -->
         
-                <a class="btn btn-primary btn-sm me-2"
-                   href="project-isl2mocap.html">
-                  View details
-                </a>
-                <a class="btn btn-outline-secondary btn-sm"
-                   href="https://github.com/meghna-shekhar/Indian-Sign-Language-to-MOCAP"
-                   target="_blank" rel="noopener noreferrer">
-                  Code
-                </a>
-        
-                <!-- Make the whole card clickable towards details -->
-                <a href="project-isl2mocap.html" class="stretched-link"></a>
+                <a href="isl-translation.html" class="stretched-link"></a>
               </div>
             </div>
         
             <!-- NamaSign -->
-            <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="150">
+            <div class="card project-card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="100">
               <img src="images/projects/isl1.png"
                    class="img-fluid me-3"
                    style="width:220px; height:auto; object-fit:contain;"
                    alt="NamaSign ISL Alphabet Detection">
               <div class="flex-grow-1 position-relative">
-                <h3 class="h5 mb-1">NamaSign: ISL Alphabet Detection</h3>
-                <small class="text-muted d-block mb-2">Deep Learning · Image Classification</small>
+                <h4 class="h5 mb-1">NamaSign: Indian Sign Language Alphabet Detection</h4>
+                <small class="text-muted d-block mb-2">
+                  Deep Learning · Image Classification
+                </small>
         
                 <p class="mb-3">
-                  Image classifier for Indian Sign Language alphabets using VGG16 and ResNet18
-                  on a cluttered, real-world dataset with varied lighting and backgrounds.
+                  Image classifier for ISL alphabet hand signs using VGG16 and ResNet18 on a real-world,
+                  cluttered dataset with varied skin tones, backgrounds, and lighting. Achieved 93.9% and
+                  91.8% accuracy respectively.
                 </p>
         
-                <a class="btn btn-primary btn-sm me-2"
-                   href="project-namasign.html">
-                  View details
-                </a>
-                <a class="btn btn-outline-secondary btn-sm"
-                   href="https://github.com/meghna-shekhar/NamaSign-Indian-Sign-Language-Alphabet-Detection"
-                   target="_blank" rel="noopener noreferrer">
-                  Code
-                </a>
-        
-                <a href="project-namasign.html" class="stretched-link"></a>
+                <a href="namasign.html" class="stretched-link"></a>
               </div>
             </div>
         
             <!-- CareerQuest.in -->
-            <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="300">
+            <div class="card project-card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="200">
               <img src="images/projects/cq.png"
                    class="img-fluid me-3"
                    style="width:220px; height:auto; object-fit:contain;"
                    alt="CareerQuest.in">
               <div class="flex-grow-1 position-relative">
-                <h3 class="h5 mb-1">CareerQuest.in Website</h3>
-                <small class="text-muted d-block mb-2">Web Development · Recommendations</small>
+                <h4 class="h5 mb-1">CareerQuest.in – MOOC Recommendation Platform</h4>
+                <small class="text-muted d-block mb-2">
+                  Web Development · Recommender Systems
+                </small>
         
                 <p class="mb-3">
-                  Course-recommendation site that scrapes MOOCs and suggests programs based on
-                  user-selected career paths, with side-by-side comparison of ratings and prices.
+                  Web app that scrapes online course platforms and recommends programs based on user-chosen
+                  career paths. Supports keyword-based matching, custom SQL backend, and side-by-side comparison
+                  of course prices, structures, and reviews.
                 </p>
         
-                <a class="btn btn-primary btn-sm me-2"
-                   href="project-careerquest.html">
-                  View details
-                </a>
-                <a class="btn btn-outline-secondary btn-sm"
-                   href="https://github.com/meghna-shekhar/CareerQuest.in"
-                   target="_blank" rel="noopener noreferrer">
-                  Code
-                </a>
-        
-                <a href="project-careerquest.html" class="stretched-link"></a>
+                <a href="careerquest.html" class="stretched-link"></a>
               </div>
             </div>
         
-            <!-- TEMPLATE for future projects -->
-            <div class="card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="450">
-              <img src="images/projects/placeholder.png"
+            <!-- Covid Data Visualization -->
+            <div class="card project-card mb-4 p-3 d-flex flex-row align-items-start" data-aos="fade-up" data-aos-delay="300">
+              <img src="images/projects/covid-viz.png"
                    class="img-fluid me-3"
                    style="width:220px; height:auto; object-fit:contain;"
-                   alt="Project placeholder">
+                   alt="Covid-19 Data Visualization">
               <div class="flex-grow-1 position-relative">
-                <h3 class="h5 mb-1">[Project Title]</h3>
-                <small class="text-muted d-block mb-2">[Area · e.g., NLP · Data Engineering]</small>
+                <h4 class="h5 mb-1">Covid-19 Data Visualization for AIIMS Delhi</h4>
+                <small class="text-muted d-block mb-2">
+                  Data Visualization · MongoDB · Grafana
+                </small>
         
                 <p class="mb-3">
-                  One-sentence summary of what the project does and why it matters.
+                  Built dashboards in Grafana over MongoDB to differentiate pneumonia vs. COVID-affected
+                  lung X-rays and provide actionable logistical insights to AIIMS Delhi through interactive
+                  charts and alerts.
                 </p>
+                <!-- <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a> -->
         
-                <a class="btn btn-primary btn-sm me-2"
-                   href="[project-slug].html">
-                  View details
-                </a>
-                <!-- Optional: only if you have GitHub -->
-                <a class="btn btn-outline-secondary btn-sm"
-                   href="#"
-                   target="_blank" rel="noopener noreferrer">
-                  Code
-                </a>
-        
-                <a href="[project-slug].html" class="stretched-link"></a>
+                <a href="covid-viz.html" class="stretched-link"></a>
               </div>
             </div>
+        
+            <!-- Earlier web / IoT / misc – optional smaller list -->
+            <h3 class="h6 mt-5 mb-3 text-muted">Earlier work</h3>
+        
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <strong>Complaint Management System (Node.js)</strong> – Full-stack web app with separate
+                employee, handyman, and admin roles to track and resolve complaints inside an organization.
+              </li>
+              <li class="mb-2">
+                <strong>Automated Plant Watering (IoT)</strong> – Arduino-based system using LDR and soil
+                moisture sensors to control a submerged water pump and maintain optimal soil moisture.
+              </li>
+            </ul>
         
           </div>
         </div>
@@ -186,24 +271,27 @@
     <div class="text-center mb-5">
       <h2 class="marker marker-center">Contact Me</h2>
     </div>
-      <div class="col-md-12" data-aos="fade-left" data-aos-delay="300" style="text-align: center;">
-        <div class="mt-3 px-1">
-          <div class="h5">Let’s talk!</div>
-          <p>If you like my work and would like to collaborate, get in touch using my email.</p>
-        </div>
-        <div class="mt-53 px-1">
-          <div class="row" style="display: inline-block; margin-left: auto;margin-right: auto;"> 
-            <div class="row-cols-sm-auto ">
-              <div class="pb-1">Personal Email</div>
+    <div class="col-md-12" data-aos="fade-left" data-aos-delay="300" style="text-align: center;">
+      <div class="mt-3 px-1">
+        <div class="h5">Let’s talk!</div>
+        <p>If you like my work and would like to collaborate, get in touch using my email.</p>
+      </div>
+      <div class="mt-3 px-1">
+        <div class="row" style="display: inline-block; margin-left: auto; margin-right: auto;">
+          <div class="row-cols-sm-auto">
+            <div class="pb-1">Personal Email</div>
+          </div>
+          <div class="row-cols-sm-auto">
+            <div class="pb-1 fw-bolder">
+              <a href="mailto:meghna.shekhar2020@gmail.com">meghna.shekhar2020@gmail.com</a>
             </div>
-            <div class="row-cols-sm-auto ">
-              <div class="pb-1 fw-bolder">meghna.shekhar2020@gmail.com</div>
-            </div>
-            <div class="row-cols-sm-auto ">
-              <div class="pb-1">University Email</div>
-            </div>
-            <div class="row-cols-sm-auto ">
-              <div class="pb-1 fw-bolder">meghnatr@buffalo.edu</div>
+          </div>
+          <div class="row-cols-sm-auto">
+            <div class="pb-1">University Email</div>
+          </div>
+          <div class="row-cols-sm-auto">
+            <div class="pb-1 fw-bolder">
+              <a href="mailto:meghnatr@buffalo.edu">meghnatr@buffalo.edu</a>
             </div>
           </div>
         </div>
@@ -219,15 +307,32 @@
       <div class="social-nav">
         <nav role="navigation">
           <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link" href="https://github.com/meghna-shekhar" title="GitHub"><i class="fab fa-github"></i><span class="menu-title sr-only">GitHub</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://leetcode.com/u/meghna_shekhar/" title="LeetCode"><i class="cib-leetcode"></i><span class="menu-title sr-only">LeetCode</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/meghna-t-s/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/meghna-shekhar" title="GitHub">
+                <i class="fab fa-github"></i><span class="menu-title sr-only">GitHub</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://leetcode.com/u/meghna_shekhar/" title="LeetCode">
+                <i class="cib-leetcode"></i><span class="menu-title sr-only">LeetCode</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/meghna-t-s/" title="LinkedIn">
+                <i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://linktr.ee/meghna_shekhar" target="_blank" title="Linktree">
+                <img src="images/icons/linktree.png" class="icon-linktree-img" alt="Linktree">
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
     </div>
   </div>
-</footer></div>
+</footer>
     </div>
     <div id="scrolltop"><a class="btn btn-secondary" href="#top"><span class="icon"><i class="fas fa-angle-up fa-x"></i></span></a></div>
     <script src="./scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>

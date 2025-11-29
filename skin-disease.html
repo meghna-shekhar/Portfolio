@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indian Sign Language to MOCAP | Meghna T S</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap" media="print" onload="this.media='all'"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
+    </noscript>
+
+    <link href="./css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
+    <link href="./css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
+    <link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
+    <link href="./css/aos.css?ver=1.2.0" rel="stylesheet">
+    <link href="./css/main.css?ver=1.2.0" rel="stylesheet">
+
+    <noscript>
+      <style type="text/css">
+        [data-aos] {
+          opacity: 1 !important;
+          transform: translate(0) scale(1) !important;
+        }
+      </style>
+    </noscript>
+  </head>
+
+  <body id="top">
+    <!-- NAVBAR -->
+    <header class="bg-light text-purple">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="header-nav" role="navigation">
+        <div class="container">
+          <a class="navbar-brand site-title mb-0" href="index.html#top">
+            Meghna Trichur Saravana Shekhar
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-2">
+              <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#services">Specialisation</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#education">Education</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-content">
+      <div id="content">
+        <section class="section px-3 px-lg-4 pt-5" id="project-detail">
+            <div class="container-narrow" style="margin-top: 5.5rem;">
+              <p class="text-uppercase text-muted mb-1">Project</p>
+              <h1 class="marker mb-3">Skin Disease Detection &amp; Classification</h1>
+              <p class="text-muted mb-4">
+                Computer Vision · Medical Imaging
+              </p>
+          
+              <!-- Hero image -->
+              <figure class="mb-4 text-center">
+                <img
+                  src="images/projects/skin-disease-dashboard.png"
+                  alt="Skin disease classification interface"
+                  class="img-fluid rounded shadow-sm"
+                  style="max-height: 360px; object-fit: contain; background:#ffffff;"
+                />
+                <figcaption class="text-muted mt-2" style="font-size:0.9rem;">
+                  Prototype interface showing lesion image, predicted class, and LAB-based highlight overlay.
+                </figcaption>
+              </figure>
+          
+              <article class="project-article">
+                <h2 class="h4 mt-4">Overview</h2>
+                <p>
+                  This project explores <strong>deep learning for dermatology images</strong>,
+                  building an end-to-end pipeline to classify five common skin disease types.
+                  I trained multiple CNN architectures—<strong>VGG19, ResNet50, EfficientNet-B0,
+                  and DenseNet121</strong>—and combined them into an <strong>ensemble</strong>
+                  by averaging softmax outputs to improve stability and robustness.
+                </p>
+                <p>
+                  To make predictions more interpretable, I implemented
+                  <strong>LAB-based overlays</strong> that highlight suspicious lesion regions,
+                  giving a simple form of visual explainability on top of the raw probability scores.
+                </p>
+          
+              <h2 class="h4 mt-4">Motivation</h2>
+                <p>
+                  Early screening of skin diseases can be difficult in resource-constrained settings,
+                  where access to dermatologists is limited. While this project is not a clinical tool,
+                  the goal was to <strong>prototype a decision-support system</strong> that can:
+                </p>
+                <ul>
+                  <li>Recognize a small set of common skin conditions from dermoscopic images.</li>
+                  <li>Provide <strong>transparent visual cues</strong> instead of a black-box label.</li>
+                  <li>Serve as a starting point for future work on trustworthy medical imaging models.</li>
+                </ul>
+          
+                <h2 class="h4 mt-4">Dataset & preprocessing</h2>
+                <p>
+                  I used a publicly available skin-lesion dataset (dermoscopic images) and focused on
+                  <strong>five disease classes</strong>. The pipeline included:
+                </p>
+                <ul>
+                  <li>Resizing and normalization to match the input size of each backbone.</li>
+                  <li>Data augmentation (flips, rotations, color jitter) to combat overfitting.</li>
+                  <li>Train/validation/test split with patient-level separation where possible.</li>
+                </ul>
+          
+                <h2 class="h4 mt-4">Modeling approach</h2>
+                <p>
+                  For each backbone (VGG19, ResNet50, EfficientNet-B0, DenseNet121), I:
+                </p>
+                <ul>
+                  <li>Initialized with ImageNet-pretrained weights.</li>
+                  <li>Replaced the classification head with a 5-class output layer.</li>
+                  <li>Fine-tuned the last several blocks using cross-entropy loss and Adam.</li>
+                </ul>
+                <p>
+                  After training, I built an <strong>ensemble predictor</strong>:
+                </p>
+                <ul>
+                  <li>Each model outputs class probabilities via softmax.</li>
+                  <li>Probabilities are averaged across models.</li>
+                  <li>The final prediction is the argmax of the averaged distribution.</li>
+                </ul>
+          
+                <h2 class="h4 mt-4">Explainability with LAB-based overlays</h2>
+                <p>
+                  To make predictions more interpretable, I used the LAB color space to
+                  emphasize lesion regions:
+                </p>
+                <ul>
+                  <li>Converted images to <strong>LAB space</strong> and analyzed contrast between lesion and background.</li>
+                  <li>Generated <strong>heatmap-style overlays</strong> that highlight high-attention regions.</li>
+                  <li>Rendered these overlays as semi-transparent masks on top of the original image.</li>
+                </ul>
+                <p>
+                  This provides a simple, architecture-agnostic explanation of where the model
+                  is “looking,” complementing the final label.
+                </p>
+          
+                <h2 class="h4 mt-4">Results</h2>
+                <ul>
+                  <li>
+                    Individual models achieved competitive performance, with
+                    <strong>test accuracy up to ~74%</strong> depending on the architecture.
+                  </li>
+                  <li>
+                    The <strong>ensemble</strong> reduced variance across runs and improved
+                    prediction stability compared to any single model.
+                  </li>
+                  <li>
+                    LAB overlays qualitatively aligned with visible lesion regions in many cases,
+                    making outputs easier to sanity-check.
+                  </li>
+                </ul>
+          
+                <h2 class="h4 mt-4">Limitations & next steps</h2>
+                <p>
+                  This project is purely <strong>research/prototyping</strong> and not a medical device.
+                  The dataset size is limited, labels may be noisy, and clinical deployment would
+                  require larger, curated datasets and collaboration with dermatologists.
+                </p>
+                <p>
+                  Future work could include calibrated probability estimates, stronger
+                  uncertainty modeling, and comparisons with more advanced explainability methods
+                  such as Grad-CAM.
+                </p>
+          
+                <h2 class="h4 mt-4">Tech stack</h2>
+                <p class="mb-2">
+                  <strong>Languages:</strong> Python<br/>
+                  <strong>Libraries:</strong> PyTorch / TensorFlow (choose what you actually used),
+                  NumPy, Pandas, scikit-learn, OpenCV<br/>
+                  <strong>Topics:</strong> Transfer learning, model ensembling, medical imaging,
+                  explainable AI
+                </p>
+          
+                <h2 class="h4 mt-4">Code &amp; availability</h2>
+                <p>
+                  This project was built as part of an academic course and uses a public dataset.
+                  The code can be shared on request for review and discussion, but is not yet
+                  packaged as a polished open-source release.
+                </p>
+          
+                <p>
+                  <a class="btn btn-outline-secondary btn-sm" href="projects.html">
+                    Back to all projects
+                  </a>
+                </p>
+              </article>
+            </div>
+          </section>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="pt-4 pb-4 text-center bg-light">
+      <div class="container">
+        <div class="my-3">
+          <div class="h4">Meghna Trichur Saravana Shekhar</div>
+          <p>AI Enthusiast</p>
+          <div class="social-nav">
+            <nav role="navigation">
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/meghna-shekhar" title="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span class="menu-title sr-only">GitHub</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://leetcode.com/u/meghna_shekhar/" title="LeetCode">
+                    <i class="cib-leetcode"></i>
+                    <span class="menu-title sr-only">LeetCode</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/meghna-t-s/" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="menu-title sr-only">LinkedIn</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://linktr.ee/meghna_shekhar" target="_blank" title="Linktree">
+                    <img src="images/icons/linktree.png" class="icon-linktree-img" alt="Linktree">
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="scrolltop">
+      <a class="btn btn-secondary" href="#top">
+        <span class="icon"><i class="fas fa-angle-up fa-x"></i></span>
+      </a>
+    </div>
+
+    <script src="./scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>
+    <script src="./scripts/masonry.pkgd.min.js?ver=1.2.0"></script>
+    <script src="./scripts/BigPicture.min.js?ver=1.2.0"></script>
+    <script src="./scripts/purecounter.min.js?ver=1.2.0"></script>
+    <script src="./scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
+    <script src="./scripts/aos.min.js?ver=1.2.0"></script>
+    <script src="./scripts/main.js?ver=1.2.0"></script>
+  </body>
+</html>

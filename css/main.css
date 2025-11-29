@@ -612,3 +612,28 @@ footer .social-nav .nav-link:hover svg {
 .nav-link:hover .icon-linktree-img {
   filter: invert(56%) sepia(32%) saturate(1400%) hue-rotate(-10deg) brightness(95%) contrast(95%);
 }
+
+.btn-accent {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--accent-color); /* your terracotta */
+  color: #fff !important;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-accent:hover {
+  background: #cf6049; /* slightly darker terracotta */
+  transform: translateY(-2px);
+}
+
+/* Make all project page buttons rounded like the homepage */
+.btn-rounded,
+.btn.btn-primary,
+.btn.btn-outline-secondary,
+.card .btn {
+    border-radius: 30px !important;
+    padding: 8px 22px !important;
+}
