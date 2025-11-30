@@ -574,6 +574,18 @@ footer a:hover {
   border-radius: 12px;
 }
 
+.experience-card,
+.education-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experience-card:hover,
+.education-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+
 /* --- Social icons on HERO (black background) --- */
 header .social-nav .nav-link i,
 header .social-nav .nav-link svg {
